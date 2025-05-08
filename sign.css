@@ -1,0 +1,251 @@
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 90px; /* ارتفاع الهيدر */
+}
+
+.modal-content,
+.modal-content-login {
+    background-color: #fff;
+    margin: 0 auto 5% auto;
+    padding: 30px 20px;
+    border-radius: 35px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.close-btn:hover {
+    color: black;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.modal-content header,
+.modal-content-login header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+.modal-content header .logo,
+.modal-content-login header .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 6px;
+}
+
+.modal-content h1,
+.modal-content-login h1 {
+    color: #6C3D23;
+    font-size: 20px;
+    margin: 6px 0;
+    text-align: center;
+}
+
+.modal-content hr,
+.modal-content-login hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 15px 0;
+    width: 100%;
+}
+
+.modal-content form,
+.modal-content-login form {
+    padding: 0 15px;
+}
+
+.modal-content form input,
+.modal-content-login form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #4caf50;
+    border-radius: 25px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.modal-content .already-account,
+.modal-content-login .already-account {
+    margin-top: 15px;
+    font-size: 14px;
+    padding: 0 15px;
+}
+
+.modal-content .google-logo,
+.modal-content-login .google-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.modal-content .google-button,
+.modal-content-login .google-button {
+    background-color: #298B70; 
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .google-button:hover,
+.modal-content-login .google-button:hover {
+    background-color: #236e58;
+}
+
+.modal-content .email-button {
+    background-color: #6C3D23;
+    color: white;
+    width: 100%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content .email-button:hover {
+    background-color: #5a3320;
+}
+
+.modal-content .already-account a {
+    color: #6C3D23; 
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.modal-content .already-account a:hover {
+    color: #5a3320;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .modal-content,
+    .modal-content-login {
+        margin: 0 auto 10% auto;
+        width: 95%;
+        padding: 20px 15px;
+    }
+
+    .modal-content h1,
+    .modal-content-login h1 {
+        font-size: 18px;
+    }
+
+    .modal-content form input,
+    .modal-content-login form input {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .modal-content .google-button,
+    .modal-content-login .google-button,
+    .modal-content .email-button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .modal {
+        padding-top: 70px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .modal-content,
+    .modal-content-login {
+        margin: 0 auto 15% auto;
+        padding: 15px 10px;
+    }
+
+    .modal-content header .logo,
+    .modal-content-login header .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .modal-content h1,
+    .modal-content-login h1 {
+        font-size: 16px;
+    }
+
+    .modal-content form input,
+    .modal-content-login form input {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .modal-content .google-button,
+    .modal-content-login .google-button,
+    .modal-content .email-button {
+        padding: 8px 12px;
+        font-size: 13px;
+    }
+
+    .modal {
+        padding-top: 50px;
+    }
+}
+
+/* تحسينات للشاشات الكبيرة */
+@media screen and (min-width: 1024px) {
+    .modal-content,
+    .modal-content-login {
+        margin: 3% auto;
+        max-width: 450px;
+    }
+
+    .modal-content h1,
+    .modal-content-login h1 {
+        font-size: 24px;
+    }
+
+    .modal-content form input,
+    .modal-content-login form input {
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+}

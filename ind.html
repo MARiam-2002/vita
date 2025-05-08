@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Vita Tone</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="sign.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="q2.css" />
+    <link rel="stylesheet" href="choosestyle.css" />
+
+</head>
+<body>
+    
+<!-- Header -->
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Vita Tone Logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Media</a></li>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <button class="signup-btn" onclick="openModal()">Sign up</button>
+</header>
+
+<!-- Main Content -->
+<section class="hero-section">
+    <h1>Start your journey</h1>
+    <p>To a healthy and active life Balanced nutrition <br>and exercise designed just for you</p>
+</section>
+
+<!-- Cards Section -->
+<section class="cards-section">
+    <div class="card left-card" onclick="window.location.href='about.html';">
+        <img src="do you want.png" alt="Card 1">
+        <div class="card-content">
+            <h2>Do you want to know who we are?</h2>
+        </div>
+    </div>
+    <div class="card middle-card" onclick="openModal()">
+        <img src="would you like.png" alt="Card 2">
+        <div class="card-content">
+            <h2>Would you like <br> to join us?</h2>
+        </div>
+    </div>
+    <div class="card right-card" onclick="openTestModal()">
+        <img src="what about.png" alt="Card 3">
+        <div class="card-content">
+            <h2>What about a quick test?</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="contact-info">
+        <div class="social-media">
+            <img src="vector-Facebook.png" alt="Facebook">
+            <span>Vita Tone</span>
+            <img src="vector-insta.png" alt="Instagram">
+            <span>Vita_Tone123</span>
+            <img src="Vector-whatsap.png" alt="WhatsApp">
+            <span>+20 01025684812</span>
+        </div>
+    </div>
+</footer>
+
+<!-- Sign Up Modal -->
+<div class="modal" id="signupModal">
+    <div class="modal-content">
+        <!-- Close Button -->
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <!-- Logo and Title -->
+        <header>
+            <img src="create-acc.png" alt="Logo" class="logo">
+            <h1>Create your account</h1>
+        </header>
+
+        <!-- Google Button -->
+        <button class="google-button" onclick="openGoogleAccountsModal()">
+            <img src="icons_google.png" alt="Google Logo" class="google-logo">
+            Continue With Google
+        </button>
+
+        <!-- Separator Line -->
+        <hr>
+
+        <!-- Registration Form -->
+        <form action="#" method="post">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+            <input type="password" placeholder="Create a password" required>
+            <button class="email-button">Continue With Email</button>
+        </form>
+
+        <!-- Already have an account link -->
+        <p class="already-account">
+            <a href="#" onclick="showLoginModal()">Already have an account?</a>
+        </p>
+    </div>
+</div>
+
+<!-- Login Modal -->
+<div class="modal" id="loginModal">
+    <div class="modal-content-login">
+        <!-- Close Button -->
+        <span class="close-btn" onclick="closeLoginModal()">&times;</span>
+
+        <!-- Logo and Title -->
+        <header>
+            <img src="create-acc.png" alt="Logo" class="logo">
+            <h1>Create your account</h1>
+        </header>
+
+        <!-- Google Button -->
+        <button class="google-button" onclick="openGoogleAccountsModal()">
+            <img src="icons_google.png" alt="Google Logo" class="google-logo">
+            Continue With Google
+        </button>
+
+        <!-- Separator Line -->
+        <hr>
+
+        <!-- Login Form -->
+        <form action="#" method="post">
+            <input type="email" placeholder="Your email" required>
+            <input type="password" placeholder="Create a password" required>
+            <button class="email-button">Log-in</button>
+        </form>
+    </div>
+</div>
+
+<!-- Google Accounts Modal -->
+<div class="modal" id="googleAccountsModal">
+    <div class="modal-content-google">
+        <!-- Close Button -->
+        <span class="close-btn" onclick="closeGoogleAccountsModal()">&times;</span>
+
+        <!-- Header -->
+        <header>
+            <img src="Google Logo.png" alt="Account Avatar">
+            <h1>Choose an account</h1>
+        </header>
+
+        <!-- Account List -->
+        <ul class="accounts-list">
+            <li>
+                <img src="Profile Picture.png" alt="Account Avatar">
+                <div class="account-info">
+                    <h2>Account Name</h2>
+                    <p>email@gmail.com</p>
+                </div>
+            </li>
+            <li>
+                <img src="Profile Picture.png" alt="Account Avatar">
+                <div class="account-info">
+                    <h2>Account Name</h2>
+                    <p>another.email@gmail.com</p>
+                </div>
+            </li>
+            <li>
+                <img src="Account Icon.png" alt="Use another account">
+                <div class="account-info">
+                    <h2>Use another account</h2>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Quick Test Modal -->
+<div class="modal" id="testModal">
+    <div class="modal-content-test">
+        <!-- Close Button -->
+        <span class="close-btn" onclick="closeTestModal()">&times;</span>
+
+        <!-- Title -->
+        <header>
+            <h1>What about a quick test?</h1>
+        </header>
+
+        <!-- Form -->
+        <form id="plan-form">
+            <!-- What is your goal? -->
+            <div class="question">
+                <h3>What is your goal?</h3>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="goal" value="lose_weight">
+                        Lose weight
+                    </label>
+                    <label>
+                        <input type="radio" name="goal" value="build_muscle">
+                        Build muscle
+                    </label>
+                    <label>
+                        <input type="radio" name="goal" value="maintain_weight">
+                        Maintain weight
+                    </label>
+                    <label>
+                        <input type="radio" name="goal" value="improve_fitness">
+                        Improve fitness
+                    </label>
+                </div>
+            </div>
+
+            <!-- How often do you exercise per week currently? -->
+            <div class="question">
+                <h3>How often do you exercise per week currently?</h3>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="exercise_frequency" value="never">
+                        Never, but want to start
+                    </label>
+                    <label>
+                        <input type="radio" name="exercise_frequency" value="low">
+                        Low (0–1 time)
+                    </label>
+                    <label>
+                        <input type="radio" name="exercise_frequency" value="moderate">
+                        Moderate (2–4 times)
+                    </label>
+                    <label>
+                        <input type="radio" name="exercise_frequency" value="high">
+                        High (5+ times)
+                    </label>
+                </div>
+            </div>
+
+            <!-- Eating habits -->
+            <div class="question">
+                <h3>How would you describe your eating habits?</h3>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="eating_habits" value="Irregular and frequent fast food">
+                        Irregular and frequent fast food
+                    </label>
+                    <label>
+                        <input type="radio" name="eating_habits" value="Sometimes I eat healthy, sometimes not">
+                        Sometimes I eat healthy, sometimes not
+                    </label>
+                    <label>
+                        <input type="radio" name="eating_habits" value="I try to stick to a specific regimen">
+                        I try to stick to a specific regimen
+                    </label>
+                    <label>
+                        <input type="radio" name="eating_habits" value="I follow a clear eating plan">
+                        I follow a clear eating plan
+                    </label>
+                </div>
+            </div>
+
+            <!-- Sleep hours -->
+            <div class="question">
+                <h3>How many hours of sleep do you get per day on average?</h3>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="hours-sleep-per-day" value="Less than 5 hours">
+                        Less than 5 hours
+                    </label>
+                    <label>
+                        <input type="radio" name="hours-sleep-per-day" value="5 to 6 hours">
+                        5 to 6 hours
+                    </label>
+                    <label>
+                        <input type="radio" name="hours-sleep-per-day" value="7 to 8 hours">
+                        7 to 8 hours
+                    </label>
+                    <label>
+                        <input type="radio" name="hours-sleep-per-day" value="More than 8 hours">
+                        More than 8 hours
+                    </label>
+                </div>
+            </div>
+
+            <!-- Energy level -->
+            <div class="question">
+                <h3>How would you describe your energy level during the day?</h3>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="energy-level" value="Always tired">
+                        Always tired
+                    </label>
+                    <label>
+                        <input type="radio" name="energy-level" value="Sometimes I feel sluggish">
+                        Sometimes I feel sluggish
+                    </label>
+                    <label>
+                        <input type="radio" name="energy-level" value="My energy is average to acceptable">
+                        My energy is average to acceptable
+                    </label>
+                    <label>
+                        <input type="radio" name="energy-level" value="I am energetic and enthusiastic most of the time">
+                        I am energetic and enthusiastic most of the time
+                    </label>
+                </div>
+            </div>
+
+            <!-- BMI -->
+            <div class="question">
+                <h3>Calculate your body mass index (BMI):</h3>
+                <p><strong>Use this formula:</strong></p>
+                <p><code>BMI = weight (kg) ÷ (height in meters × height in meters)</code></p>
+                <p><strong>Then choose your category:</strong></p>
+                <div class="options">
+                    <label>
+                        <input type="radio" name="body-mass" value="Less than 18.5 - Underweight">
+                        Less than 18.5 - Underweight
+                    </label>
+                    <label>
+                        <input type="radio" name="body-mass" value="18.5 to 24.9 - Normal">
+                        18.5 to 24.9 - Normal
+                    </label>
+                    <label>
+                        <input type="radio" name="body-mass" value="25 to 29.9 - Overweight">
+                        25 to 29.9 - Overweight
+                    </label>
+                    <label>
+                        <input type="radio" name="body-mass" value="30 or more Obesity">
+                        30 or more Obesity
+                    </label>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="email-button">Generate Plan</button>
+        </form>
+    </div>
+</div>
+
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+</body>
+</html>
